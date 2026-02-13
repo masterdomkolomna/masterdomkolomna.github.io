@@ -3,127 +3,190 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Строительные работы Коломна</title>
+<title>МастерДом | Строительные работы Коломна</title>
 
 <style>
 
 body{
 margin:0;
 font-family:Arial, sans-serif;
-background:black;
+background:#050505;
 color:white;
 }
 
-/* Фон */
+/* HERO */
+
 .hero{
-min-height:100vh;
-background:url("IMG_8011.png") center/cover no-repeat;
+height:100vh;
+background:url("photo.jpg") center/cover no-repeat;
 display:flex;
 align-items:center;
-padding:40px 20px;
-position:relative;
+justify-content:center;
+text-align:center;
+padding:20px;
 }
 
-.hero::before{
-content:"";
-position:absolute;
-inset:0;
-background:rgba(0,0,0,0.65);
-backdrop-filter: blur(4px);
-}
-
-/* Контент */
-.content{
-position:relative;
-max-width:600px;
-z-index:2;
-}
-
-h1{
-font-size:36px;
-line-height:1.2;
-margin-bottom:30px;
-animation:fadeUp 1s ease;
-}
-
-/* Карточки услуг */
-.service{
-border:2px solid #39ff14;
-border-radius:40px;
-padding:15px 25px;
-margin-bottom:15px;
-background:rgba(255,255,255,0.05);
+.hero-content{
+background:rgba(0,0,0,0.6);
+padding:50px;
+border-radius:20px;
 backdrop-filter:blur(8px);
-animation:fadeUp 1s ease;
-transition:.3s;
 }
 
-.service:hover{
-background:rgba(57,255,20,0.2);
-transform:translateY(-3px);
+.hero h1{
+font-size:48px;
+margin-bottom:20px;
 }
 
-/* Телефон */
-.phone{
-margin-top:25px;
-font-size:26px;
-border:2px solid #39ff14;
+.hero p{
+color:#ccc;
+margin-bottom:30px;
+}
+
+.btn{
 display:inline-block;
-padding:14px 30px;
-border-radius:40px;
-text-decoration:none;
-color:white;
-transition:.3s;
-}
-
-.phone:hover{
-background:#39ff14;
-color:black;
-}
-
-/* Telegram кнопка */
-.telegram{
-margin-top:15px;
-display:inline-block;
-background:#39ff14;
-color:black;
-padding:14px 30px;
-border-radius:40px;
-text-decoration:none;
+padding:15px 35px;
+border-radius:50px;
 font-weight:bold;
-transition:.3s;
+text-decoration:none;
+margin:10px;
+transition:0.3s;
 }
 
-.telegram:hover{
+.phone{
+background:#39ff14;
+color:black;
+}
+
+.telegram{
+border:2px solid #39ff14;
+color:#39ff14;
+}
+
+.btn:hover{
 transform:scale(1.05);
 }
 
-/* Анимация */
-@keyframes fadeUp{
-from{
-opacity:0;
-transform:translateY(30px);
-}
-to{
-opacity:1;
-transform:translateY(0);
-}
+/* SERVICES */
+
+.services{
+padding:80px 20px;
+text-align:center;
 }
 
-/* Плавающая кнопка звонка */
-.call-fixed{
-position:fixed;
-bottom:20px;
-right:20px;
+.cards{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:30px;
+margin-top:40px;
+}
+
+.card{
+background:#111;
+padding:30px;
+border-radius:15px;
+width:260px;
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 0 30px #39ff14;
+}
+
+/* WHY US */
+
+.why{
+padding:80px 20px;
+background:#0a0a0a;
+text-align:center;
+}
+
+.why ul{
+list-style:none;
+padding:0;
+max-width:500px;
+margin:auto;
+}
+
+.why li{
+margin:15px 0;
+color:#bbb;
+}
+
+/* WORKS */
+
+.works{
+padding:80px 20px;
+text-align:center;
+}
+
+.gallery{
+display:flex;
+flex-wrap:wrap;
+gap:20px;
+justify-content:center;
+margin-top:40px;
+}
+
+.gallery img{
+width:300px;
+border-radius:15px;
+}
+
+/* PREMIUM CONTACT */
+
+.premium-contact{
+padding:100px 20px;
+display:flex;
+justify-content:center;
+}
+
+.contact-card{
+max-width:500px;
+width:100%;
+padding:50px;
+border-radius:20px;
+background:rgba(255,255,255,0.05);
+backdrop-filter:blur(12px);
+border:1px solid rgba(57,255,20,0.3);
+box-shadow:0 0 40px rgba(57,255,20,0.15);
+text-align:center;
+}
+
+.contact-phone{
+display:block;
+font-size:26px;
+color:#39ff14;
+text-decoration:none;
+margin:25px 0;
+font-weight:bold;
+}
+
+.contact-tg{
+display:inline-block;
+padding:16px 40px;
+border-radius:50px;
 background:#39ff14;
 color:black;
-padding:15px 20px;
+font-weight:bold;
+text-decoration:none;
+}
+
+/* FLOAT BUTTON */
+
+.float-btn{
+position:fixed;
+right:20px;
+bottom:20px;
+background:#39ff14;
+color:black;
+padding:15px 25px;
 border-radius:50px;
 font-weight:bold;
 text-decoration:none;
 box-shadow:0 0 20px #39ff14;
-z-index:999;
 }
 
 </style>
@@ -131,55 +194,112 @@ z-index:999;
 
 <body>
 
+<!-- HERO -->
+
 <section class="hero">
+<div class="hero-content">
 
-<div class="content">
+<h1>Строительные работы под ключ</h1>
 
-<h1>
-Строительные работы Коломна<br>
-Район +100км
-</h1>
+<p>
+Бригада МастерДом<br>
+Коломна и Московская область
+</p>
 
-<div class="service">Монтаж террас и ограждений (ДПК, дерево)</div>
-<div class="service">Отделка деревянных домов и бань</div>
-<div class="service">Сварочные работы • Металлокаркас • Лестницы</div>
-<div class="service">Кровельные работы</div>
-<div class="service">Каркасные дома под ключ</div>
-
-<a href="tel:+79260737739" class="phone">
-+7 926 073 77 39
+<a href="tel:+79260737739" class="btn phone">
+Позвонить
 </a>
 
-<br>
-
-<a href="tg://resolve?phone=79260737739" class="telegram">
-Написать в Telegram
+<a href="tg://resolve?phone=79260737739" class="btn telegram">
+Telegram
 </a>
-
-<style>
-.telegram-btn{
-display:inline-block;
-padding:16px 30px;
-border-radius:40px;
-background:linear-gradient(45deg,#00ff88,#00cc66);
-color:black;
-font-weight:700;
-text-decoration:none;
-box-shadow:0 0 20px rgba(0,255,136,0.5);
-transition:0.3s;
-}
-
-.telegram-btn:hover{
-transform:scale(1.05);
-box-shadow:0 0 35px rgba(0,255,136,0.9);
-}
-</style>
 
 </div>
 </section>
 
-<a href="tel:+79260737739" class="call-fixed">
-Позвонить
+<!-- SERVICES -->
+
+<section class="services">
+
+<h2>Наши услуги</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Строительство домов</h3>
+<p>Полный цикл строительства</p>
+</div>
+
+<div class="card">
+<h3>Отделочные работы</h3>
+<p>Квартиры и коттеджи</p>
+</div>
+
+<div class="card">
+<h3>Монтаж ДПК</h3>
+<p>Террасы и фасады</p>
+</div>
+
+</div>
+</section>
+
+<!-- WHY US -->
+
+<section class="why">
+
+<h2>Почему выбирают нас</h2>
+
+<ul>
+<li>✔ Опыт более 10 лет</li>
+<li>✔ Работаем по договору</li>
+<li>✔ Соблюдаем сроки</li>
+<li>✔ Гарантия качества</li>
+</ul>
+
+</section>
+
+<!-- WORKS -->
+
+<section class="works">
+
+<h2>Примеры работ</h2>
+
+<div class="gallery">
+<img src="photo.jpg">
+<img src="photo.jpg">
+<img src="photo.jpg">
+</div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section class="premium-contact">
+
+<div class="contact-card">
+
+<h2>Свяжитесь с нами</h2>
+
+<p>
+Строительная бригада МастерДом<br>
+Коломна и область
+</p>
+
+<a href="tel:+79260737739" class="contact-phone">
++7 926 073 77 39
+</a>
+
+<a href="tg://resolve?phone=79260737739" class="contact-tg">
+Написать в Telegram
+</a>
+
+</div>
+</section>
+
+<!-- FLOAT BUTTON -->
+
+<a href="tg://resolve?phone=79260737739" class="float-btn">
+Написать в Telegram
 </a>
 
 </body>
