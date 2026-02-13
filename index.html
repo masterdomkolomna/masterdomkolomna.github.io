@@ -7,145 +7,116 @@
 
 <style>
 
-body{
+*{
 margin:0;
+padding:0;
+box-sizing:border-box;
 font-family:Arial, sans-serif;
-color:white;
-background:black;
 }
 
-/* ===== ФОН ===== */
+body{
+background:black;
+color:white;
+}
+
+/* ===== Главный экран ===== */
 
 .hero{
 height:100vh;
-background:
-linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
-url("https://images.unsplash.com/photo-1505693416388-ac5ce068fe85");
-background-size: cover;
-background-position: center;
 display:flex;
 align-items:center;
 justify-content:center;
-text-align:center;
-}
-
-display:flex;
-flex-direction:column;
-justify-content:center;
+text-align:left;
 padding:40px;
+
+background:
+linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.85)),
+url("https://images.unsplash.com/photo-1600585154340-be6161a56a0c");
+
+background-size:cover;
+background-position:center;
 }
 
-/* ===== ТЕКСТ ===== */
+.container{
+max-width:650px;
+}
 
-.hero h1{
+/* Заголовок */
+
+h1{
 font-size:48px;
-max-width:800px;
-line-height:1.2;
 margin-bottom:30px;
+font-weight:700;
 }
 
-.region{
-font-size:20px;
-opacity:0.7;
-margin-bottom:30px;
-}
-
-/* ===== СПИСОК УСЛУГ ===== */
-
-.service-list{
-display:flex;
-flex-direction:column;
-gap:15px;
-max-width:600px;
-}
+/* Услуги */
 
 .service{
-border:2px solid #7CFF00;
+padding:16px 25px;
+margin-bottom:15px;
+
+border:1px solid rgba(0,255,120,0.7);
 border-radius:40px;
-padding:15px 25px;
-font-size:20px;
-background:rgba(0,0,0,0.5);
-backdrop-filter:blur(6px);
+
+background:rgba(255,255,255,0.05);
+backdrop-filter:blur(8px);
+
+font-size:19px;
 transition:0.3s;
 }
 
 .service:hover{
-background:#7CFF00;
-color:black;
+transform:translateX(5px);
+border-color:#00ff88;
 }
 
-/* ===== ТЕЛЕФОН ===== */
+/* Кнопки */
 
-.phone{
-margin-top:35px;
-display:inline-block;
-border:2px solid #7CFF00;
-border-radius:40px;
+.buttons{
+margin-top:40px;
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.btn{
 padding:18px 35px;
-font-size:28px;
+border-radius:50px;
+font-size:20px;
 font-weight:bold;
-color:white;
 text-decoration:none;
 transition:0.3s;
 }
 
-.phone:hover{
-background:#7CFF00;
-color:black;
-}
-
-/* ===== НИЖНИЙ БЛОК ===== */
-
-.about{
-padding:70px 20px;
-text-align:center;
-background:#050505;
-}
-
-.about h2{
-font-size:38px;
-margin-bottom:20px;
-}
-
-.about p{
-font-size:20px;
-opacity:0.7;
-}
-
-/* ===== TELEGRAM КНОПКА ===== */
-
-.telegram{
-position:fixed;
-bottom:25px;
-right:25px;
-background:#7CFF00;
-color:black;
-padding:18px 30px;
-border-radius:50px;
-font-weight:bold;
-text-decoration:none;
-box-shadow:0 0 25px #7CFF00;
-animation:pulse 2s infinite;
-}
-
-@keyframes pulse{
-0%{box-shadow:0 0 10px #7CFF00;}
-50%{box-shadow:0 0 30px #7CFF00;}
-100%{box-shadow:0 0 10px #7CFF00;}
-}
-
-/* ===== МОБИЛКА ===== */
-
-@media(max-width:700px){
-
-.hero h1{
-font-size:32px;
-}
+/* Телефон */
 
 .phone{
-font-size:22px;
+border:2px solid #00ff88;
+color:white;
 }
 
+.phone:hover{
+background:#00ff88;
+color:black;
+}
+
+/* Telegram */
+
+.telegram{
+background:#00ff88;
+color:black;
+}
+
+.telegram:hover{
+opacity:0.8;
+}
+
+/* Подпись */
+
+.footer{
+margin-top:30px;
+opacity:0.7;
+font-size:15px;
 }
 
 </style>
@@ -154,57 +125,37 @@ font-size:22px;
 <body>
 
 <section class="hero">
+<div class="container">
 
 <h1>
-Строительные работы Коломна  
-Район +100км
+Строительные работы<br>
+Коломна +100км
 </h1>
 
-<div class="region">Работаем под ключ</div>
+<div class="service">Монтаж террас и ограждений (ДПК, дерево)</div>
+<div class="service">Отделка деревянных домов и бань</div>
+<div class="service">Сварочные работы • Металлокаркас • Лестницы</div>
+<div class="service">Кровельные работы</div>
+<div class="service">Каркасные дома под ключ</div>
 
-<div class="service-list">
+<div class="buttons">
 
-<div class="service">
-Монтаж террас и ограждений, ДПК, дерево
-</div>
-
-<div class="service">
-Отделка деревянных домов и бань
-</div>
-
-<div class="service">
-Сварные работы, металлокаркас, лестницы
-</div>
-
-<div class="service">
-Кровельные работы
-</div>
-
-<div class="service">
-Каркасные дома и многое другое
-</div>
-
-</div>
-
-<a href="tel:+79260737739" class="phone">
-+7 926 073 77 39
+<a href="tel:+79260737739" class="btn phone">
+📞 Позвонить
 </a>
 
-</section>
+<a href="https://t.me/iyrasya1985" class="btn telegram">
+✉ Telegram
+</a>
 
-<section class="about">
+</div>
 
-<h2>Почему выбирают нас</h2>
-
-<p>
+<div class="footer">
 Профессиональный инструмент • Опытная бригада • Гарантия качества
-</p>
+</div>
 
+</div>
 </section>
-
-<a href="https://t.me/iyrasya1984" class="telegram">
-Написать в Telegram
-</a>
 
 </body>
 </html>
