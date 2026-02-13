@@ -2,162 +2,204 @@
 <html lang="ru">
 <head>
 <meta charset="UTF-8">
-<title>Отделочные и строительные работы Коломна</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Строительные работы Коломна</title>
 
 <style>
+
 body{
 margin:0;
-font-family:Arial;
-background:#0c0c0c;
+font-family:Arial, sans-serif;
 color:white;
+background:black;
 }
 
-.container{
-width:90%;
-max-width:1200px;
-margin:auto;
-}
+/* ===== ФОН ===== */
 
-header{
+.hero{
 height:100vh;
-background:url("ACEF6D13-6B2F-4997-8D41-A5FDC47B8BBC.jpeg") center/cover;
+background:
+linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)),
+url("https://images.unsplash.com/photo-1600585154340-be6161a56a0c");
+background-size:cover;
+background-position:center;
+
 display:flex;
-align-items:center;
+flex-direction:column;
 justify-content:center;
-text-align:center;
+padding:40px;
 }
 
-h1{
-font-size:60px;
-color:#9cff00;
+/* ===== ТЕКСТ ===== */
+
+.hero h1{
+font-size:48px;
+max-width:800px;
+line-height:1.2;
+margin-bottom:30px;
 }
 
-.section{
-padding:80px 0;
+.region{
+font-size:20px;
+opacity:0.7;
+margin-bottom:30px;
 }
 
-.cards{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:30px;
+/* ===== СПИСОК УСЛУГ ===== */
+
+.service-list{
+display:flex;
+flex-direction:column;
+gap:15px;
+max-width:600px;
 }
 
-.card{
-background:rgba(255,255,255,0.08);
-backdrop-filter:blur(10px);
-padding:30px;
-border-radius:15px;
+.service{
+border:2px solid #7CFF00;
+border-radius:40px;
+padding:15px 25px;
+font-size:20px;
+background:rgba(0,0,0,0.5);
+backdrop-filter:blur(6px);
 transition:0.3s;
 }
 
-.card:hover{
-transform:translateY(-10px);
+.service:hover{
+background:#7CFF00;
+color:black;
 }
 
-.btn{
+/* ===== ТЕЛЕФОН ===== */
+
+.phone{
+margin-top:35px;
 display:inline-block;
-background:#9cff00;
-color:black;
-padding:12px 25px;
-border-radius:8px;
-text-decoration:none;
+border:2px solid #7CFF00;
+border-radius:40px;
+padding:18px 35px;
+font-size:28px;
 font-weight:bold;
+color:white;
+text-decoration:none;
+transition:0.3s;
 }
+
+.phone:hover{
+background:#7CFF00;
+color:black;
+}
+
+/* ===== НИЖНИЙ БЛОК ===== */
+
+.about{
+padding:70px 20px;
+text-align:center;
+background:#050505;
+}
+
+.about h2{
+font-size:38px;
+margin-bottom:20px;
+}
+
+.about p{
+font-size:20px;
+opacity:0.7;
+}
+
+/* ===== TELEGRAM КНОПКА ===== */
 
 .telegram{
 position:fixed;
-right:20px;
-bottom:20px;
-background:#9cff00;
-padding:15px 20px;
+bottom:25px;
+right:25px;
+background:#7CFF00;
+color:black;
+padding:18px 30px;
 border-radius:50px;
 font-weight:bold;
-color:black;
 text-decoration:none;
-box-shadow:0 0 15px #9cff00;
+box-shadow:0 0 25px #7CFF00;
+animation:pulse 2s infinite;
 }
-</style>
 
+@keyframes pulse{
+0%{box-shadow:0 0 10px #7CFF00;}
+50%{box-shadow:0 0 30px #7CFF00;}
+100%{box-shadow:0 0 10px #7CFF00;}
+}
+
+/* ===== МОБИЛКА ===== */
+
+@media(max-width:700px){
+
+.hero h1{
+font-size:32px;
+}
+
+.phone{
+font-size:22px;
+}
+
+}
+
+</style>
 </head>
 
 <body>
 
-<header>
-<div>
-<h1>Отделочные работы</h1>
-<p>Коломна и область</p>
-<a class="btn" href="#">Заказать расчет</a>
-</div>
-</header>
+<section class="hero">
 
-<section class="section container">
-<h2>Наши услуги</h2>
+<h1>
+Строительные работы Коломна  
+Район +100км
+</h1>
 
-<div class="cards">
+<div class="region">Работаем под ключ</div>
 
-<div class="card">
-<h3>Отделочные работы</h3>
-<p>Монтаж террас, ограждений, отделка домов</p>
+<div class="service-list">
+
+<div class="service">
+Монтаж террас и ограждений, ДПК, дерево
 </div>
 
-<div class="card">
-<h3>Кровельные работы</h3>
-<p>Эксплуатируемые кровли</p>
+<div class="service">
+Отделка деревянных домов и бань
 </div>
 
-<div class="card">
-<h3>Металлоконструкции</h3>
-<p>Сварочные работы любой сложности</p>
+<div class="service">
+Сварные работы, металлокаркас, лестницы
 </div>
 
-<div class="card">
-<h3>Строительство веранд</h3>
-<p>Каркасные дома и террасы</p>
+<div class="service">
+Кровельные работы
+</div>
+
+<div class="service">
+Каркасные дома и многое другое
 </div>
 
 </div>
+
+<a href="tel:+79260737739" class="phone">
++7 926 073 77 39
+</a>
+
 </section>
 
-<section class="section" style="background:url('A02B8BEC-38FD-4814-90D8-177041598A04.jpeg') center/cover;">
-<div class="container">
+<section class="about">
+
 <h2>Почему выбирают нас</h2>
 
-<ul>
-<li>✔ Опыт более 10 лет</li>
-<li>✔ Работаем под ключ</li>
-<li>✔ Честные цены</li>
-<li>✔ Гарантия на работы</li>
-</ul>
+<p>
+Профессиональный инструмент • Опытная бригада • Гарантия качества
+</p>
 
-</div>
 </section>
 
-<section class="section container">
-<h2>Примеры работ</h2>
-
-<div class="cards">
-
-<img src="B9D77ED9-D42A-4664-BFDF-5B6BE1C654E3.jpeg">
-<img src="465B0F50-47D3-4CC6-83D5-73022D85566A.jpeg">
-
-</div>
-</section>
-
-<section class="section container">
-<h2>Отзывы клиентов</h2>
-
-<div class="cards">
-<div class="card">
-<p>Отличная работа, сделали террасу быстро и качественно.</p>
-</div>
-
-<div class="card">
-<p>Очень понравилось качество кровли.</p>
-</div>
-</div>
-</section>
-
-<a class="telegram" href="https://t.me/iyrasya1984">Написать в Telegram</a>
+<a href="https://t.me/iyrasya1984" class="telegram">
+Написать в Telegram
+</a>
 
 </body>
 </html>
