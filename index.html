@@ -3,120 +3,127 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Строительные работы Коломна</title>
 
 <style>
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial, sans-serif;
-}
-
 body{
+margin:0;
+font-family:Arial, sans-serif;
 background:black;
 color:white;
 }
 
-/* ===== Главный экран ===== */
-
+/* Фон */
 .hero{
-height:100vh;
+min-height:100vh;
+background:url("IMG_8011.png") center/cover no-repeat;
 display:flex;
 align-items:center;
-justify-content:center;
-text-align:left;
-padding:40px;
-
-background:
-linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.85)),
-url("https://images.unsplash.com/photo-1600585154340-be6161a56a0c");
-
-background-size:cover;
-background-position:center;
+padding:40px 20px;
+position:relative;
 }
 
-.container{
-max-width:650px;
+.hero::before{
+content:"";
+position:absolute;
+inset:0;
+background:rgba(0,0,0,0.65);
+backdrop-filter: blur(4px);
 }
 
-/* Заголовок */
+/* Контент */
+.content{
+position:relative;
+max-width:600px;
+z-index:2;
+}
 
 h1{
-font-size:48px;
+font-size:36px;
+line-height:1.2;
 margin-bottom:30px;
-font-weight:700;
+animation:fadeUp 1s ease;
 }
 
-/* Услуги */
-
+/* Карточки услуг */
 .service{
-padding:16px 25px;
-margin-bottom:15px;
-
-border:1px solid rgba(0,255,120,0.7);
+border:2px solid #39ff14;
 border-radius:40px;
-
+padding:15px 25px;
+margin-bottom:15px;
 background:rgba(255,255,255,0.05);
 backdrop-filter:blur(8px);
-
-font-size:19px;
-transition:0.3s;
+animation:fadeUp 1s ease;
+transition:.3s;
 }
 
 .service:hover{
-transform:translateX(5px);
-border-color:#00ff88;
-}
-
-/* Кнопки */
-
-.buttons{
-margin-top:40px;
-display:flex;
-gap:20px;
-flex-wrap:wrap;
-}
-
-.btn{
-padding:18px 35px;
-border-radius:50px;
-font-size:20px;
-font-weight:bold;
-text-decoration:none;
-transition:0.3s;
+background:rgba(57,255,20,0.2);
+transform:translateY(-3px);
 }
 
 /* Телефон */
-
 .phone{
-border:2px solid #00ff88;
+margin-top:25px;
+font-size:26px;
+border:2px solid #39ff14;
+display:inline-block;
+padding:14px 30px;
+border-radius:40px;
+text-decoration:none;
 color:white;
+transition:.3s;
 }
 
 .phone:hover{
-background:#00ff88;
+background:#39ff14;
 color:black;
 }
 
-/* Telegram */
-
+/* Telegram кнопка */
 .telegram{
-background:#00ff88;
+margin-top:15px;
+display:inline-block;
+background:#39ff14;
 color:black;
+padding:14px 30px;
+border-radius:40px;
+text-decoration:none;
+font-weight:bold;
+transition:.3s;
 }
 
 .telegram:hover{
-opacity:0.8;
+transform:scale(1.05);
 }
 
-/* Подпись */
+/* Анимация */
+@keyframes fadeUp{
+from{
+opacity:0;
+transform:translateY(30px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
 
-.footer{
-margin-top:30px;
-opacity:0.7;
-font-size:15px;
+/* Плавающая кнопка звонка */
+.call-fixed{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#39ff14;
+color:black;
+padding:15px 20px;
+border-radius:50px;
+font-weight:bold;
+text-decoration:none;
+box-shadow:0 0 20px #39ff14;
+z-index:999;
 }
 
 </style>
@@ -125,11 +132,12 @@ font-size:15px;
 <body>
 
 <section class="hero">
-<div class="container">
+
+<div class="content">
 
 <h1>
-Строительные работы<br>
-Коломна +100км
+Строительные работы Коломна<br>
+Район +100км
 </h1>
 
 <div class="service">Монтаж террас и ограждений (ДПК, дерево)</div>
@@ -138,24 +146,22 @@ font-size:15px;
 <div class="service">Кровельные работы</div>
 <div class="service">Каркасные дома под ключ</div>
 
-<div class="buttons">
-
-<a href="tel:+79260737739" class="btn phone">
-📞 Позвонить
+<a href="tel:+79260737739" class="phone">
++7 926 073 77 39
 </a>
 
-<a href="https://t.me/iyrasya1985" class="btn telegram">
-✉ Telegram
+<br>
+
+<a href="https://t.me/iyrasya1985" class="telegram">
+Написать в Telegram
 </a>
-
-</div>
-
-<div class="footer">
-Профессиональный инструмент • Опытная бригада • Гарантия качества
-</div>
 
 </div>
 </section>
+
+<a href="tel:+79260737739" class="call-fixed">
+Позвонить
+</a>
 
 </body>
 </html>
