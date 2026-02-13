@@ -2,136 +2,162 @@
 <html lang="ru">
 <head>
 <meta charset="UTF-8">
-<title>МастерДом</title>
+<title>Отделочные и строительные работы Коломна</title>
 
 <style>
 body{
-font-family: Arial;
 margin:0;
-background:#f4f4f4;
+font-family:Arial;
+background:#0c0c0c;
+color:white;
+}
+
+.container{
+width:90%;
+max-width:1200px;
+margin:auto;
 }
 
 header{
-background:#222;
-color:white;
-padding:20px;
+height:100vh;
+background:url("ACEF6D13-6B2F-4997-8D41-A5FDC47B8BBC.jpeg") center/cover;
+display:flex;
+align-items:center;
+justify-content:center;
 text-align:center;
 }
 
-nav{
-background:#444;
-padding:10px;
-text-align:center;
+h1{
+font-size:60px;
+color:#9cff00;
 }
 
-nav a{
-color:white;
-margin:15px;
+.section{
+padding:80px 0;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+}
+
+.card{
+background:rgba(255,255,255,0.08);
+backdrop-filter:blur(10px);
+padding:30px;
+border-radius:15px;
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+.btn{
+display:inline-block;
+background:#9cff00;
+color:black;
+padding:12px 25px;
+border-radius:8px;
 text-decoration:none;
 font-weight:bold;
 }
 
-.hero{
-padding:60px;
-text-align:center;
-background:white;
-}
-
-.hero h1{
-font-size:40px;
-}
-
-.button{
-background:#ff7a00;
-color:white;
-padding:15px 30px;
+.telegram{
+position:fixed;
+right:20px;
+bottom:20px;
+background:#9cff00;
+padding:15px 20px;
+border-radius:50px;
+font-weight:bold;
+color:black;
 text-decoration:none;
-border-radius:6px;
-display:inline-block;
-margin-top:20px;
-}
-
-.services{
-padding:50px;
-text-align:center;
-}
-
-.service{
-background:white;
-margin:15px;
-padding:20px;
-border-radius:10px;
-display:inline-block;
-width:250px;
-box-shadow:0 0 10px rgba(0,0,0,0.1);
-}
-
-.contact{
-background:#222;
-color:white;
-padding:40px;
-text-align:center;
-}
-
-footer{
-background:black;
-color:white;
-padding:15px;
-text-align:center;
+box-shadow:0 0 15px #9cff00;
 }
 </style>
+
 </head>
 
 <body>
 
 <header>
-<h1>МастерДом</h1>
-<p>Ремонт и строительство под ключ</p>
+<div>
+<h1>Отделочные работы</h1>
+<p>Коломна и область</p>
+<a class="btn" href="#">Заказать расчет</a>
+</div>
 </header>
 
-<nav>
-<a href="#services">Услуги</a>
-<a href="#contacts">Контакты</a>
-</nav>
-
-<section class="hero">
-<h1>Качественный ремонт без переплат</h1>
-<p>Работаем быстро и аккуратно</p>
-
-<a class="button" href="https://t.me/ВАШ_ТЕЛЕГРАМ" target="_blank">
-Оставить заявку
-</a>
-</section>
-
-<section id="services" class="services">
+<section class="section container">
 <h2>Наши услуги</h2>
 
-<div class="service">
-<h3>Ремонт квартир</h3>
-<p>Косметический и капитальный ремонт</p>
+<div class="cards">
+
+<div class="card">
+<h3>Отделочные работы</h3>
+<p>Монтаж террас, ограждений, отделка домов</p>
 </div>
 
-<div class="service">
-<h3>Электрика</h3>
-<p>Монтаж и замена проводки</p>
+<div class="card">
+<h3>Кровельные работы</h3>
+<p>Эксплуатируемые кровли</p>
 </div>
 
-<div class="service">
-<h3>Сантехника</h3>
-<p>Установка и ремонт сантехники</p>
+<div class="card">
+<h3>Металлоконструкции</h3>
+<p>Сварочные работы любой сложности</p>
 </div>
 
+<div class="card">
+<h3>Строительство веранд</h3>
+<p>Каркасные дома и террасы</p>
+</div>
+
+</div>
 </section>
 
-<section id="contacts" class="contact">
-<h2>Контакты</h2>
-<p>Телефон: +7 XXX XXX XX XX</p>
-<p>Telegram: @+79260737739</p>
+<section class="section" style="background:url('A02B8BEC-38FD-4814-90D8-177041598A04.jpeg') center/cover;">
+<div class="container">
+<h2>Почему выбирают нас</h2>
+
+<ul>
+<li>✔ Опыт более 10 лет</li>
+<li>✔ Работаем под ключ</li>
+<li>✔ Честные цены</li>
+<li>✔ Гарантия на работы</li>
+</ul>
+
+</div>
 </section>
 
-<footer>
-<p>© МастерДом 2026</p>
-</footer>
+<section class="section container">
+<h2>Примеры работ</h2>
+
+<div class="cards">
+
+<img src="B9D77ED9-D42A-4664-BFDF-5B6BE1C654E3.jpeg">
+<img src="465B0F50-47D3-4CC6-83D5-73022D85566A.jpeg">
+
+</div>
+</section>
+
+<section class="section container">
+<h2>Отзывы клиентов</h2>
+
+<div class="cards">
+<div class="card">
+<p>Отличная работа, сделали террасу быстро и качественно.</p>
+</div>
+
+<div class="card">
+<p>Очень понравилось качество кровли.</p>
+</div>
+</div>
+</section>
+
+<a class="telegram" href="https://t.me/iyrasya1984">Написать в Telegram</a>
 
 </body>
 </html>
