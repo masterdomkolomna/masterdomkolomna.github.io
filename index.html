@@ -104,7 +104,29 @@ transition:0.3s;
 transform:translateY(-10px);
 box-shadow:0 0 30px #39ff14;
 }
+.why h2{
+  font-size: 34px;
+  font-weight: 800;
+  margin-bottom: 35px;
+  background: linear-gradient(90deg, #39ff14, #ffffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  display: inline-block;
+}
 
+.why h2::after{
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -12px;
+  width: 160px;
+  height: 3px;
+  background: #39ff14;
+  box-shadow: 0 0 15px #39ff14, 0 0 25px #39ff14;
+  border-radius: 5px;
+}
 /* WHY US */
 
 .why{
