@@ -5,7 +5,37 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>МастерДом | Строительные работы Коломна</title>
 
-<style>
+.why-list{
+  list-style:none;
+  padding:0;
+  margin-top:25px;
+  display:inline-block;
+  text-align:left;
+}
+
+.why-list li{
+  position:relative;
+  padding-left:30px;
+  margin-bottom:15px;
+  font-size:18px;
+}
+
+.why-list li::before{
+  content:"✔";
+  position:absolute;
+  left:0;
+  top:0;
+
+  color:#39ff14;
+
+  font-weight:bold;
+  font-size:18px;
+
+  text-shadow:
+    0 0 6px #39ff14,
+    0 0 12px #39ff14,
+    0 0 24px #00ff88;
+}<style>
 
 body{
 margin:0;
