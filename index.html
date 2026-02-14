@@ -127,22 +127,28 @@ color:#bbb;
 
 /* WORKS */
 
-.works{
-padding:80px 20px;
-text-align:center;
+.why ul{
+  list-style: none;
+  padding: 0;
+  max-width: 500px;
+  margin: auto;
+  text-align: left;
 }
 
-.gallery{
-display:flex;
-flex-wrap:wrap;
-gap:20px;
-justify-content:center;
-margin-top:40px;
+.why li{
+  position: relative;
+  padding-left: 35px;
+  margin: 15px 0;
+  font-size: 18px;
+  color: #bbb;
 }
 
-.gallery img{
-width:300px;
-border-radius:15px;
+.why li::before{
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #39ff14;
+  font-weight: bold;
 }
 
 /* PREMIUM CONTACT */
