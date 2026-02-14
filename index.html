@@ -193,7 +193,22 @@ font-weight:bold;
 text-decoration:none;
 box-shadow:0 0 20px #39ff14;
 }
+.why-list li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  top: 0;
 
+  color: #39ff14; /* неоновый зелёный */
+
+  font-weight: bold;
+  font-size: 20px;
+
+  text-shadow:
+    0 0 5px #39ff14,
+    0 0 10px #39ff14,
+    0 0 20px #39ff14;
+}
 </style>
 </head>
 
@@ -259,11 +274,11 @@ Telegram
 
 <h2>Почему выбирают нас</h2>
 
-<ul>
-<li>✔ Опыт более 10 лет</li>
-<li>✔ Работаем по договору</li>
-<li>✔ Соблюдаем сроки</li>
-<li>✔ Гарантия качества</li>
+<ul class="why-list">
+  <li>Опыт более 10 лет</li>
+  <li>Работаем по договору</li>
+  <li>Соблюдаем сроки</li>
+  <li>Гарантия качества</li>
 </ul>
 
 </section>
